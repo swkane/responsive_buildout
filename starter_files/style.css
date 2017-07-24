@@ -86,18 +86,18 @@ header{
 #main_content {
   background-color: #ddffff;
   border-radius: 2px;
-  padding: 10px 2%;
+  padding: 10px 6%;
 }
 
 #sidebar_content div {
   background-color: #ffffdd;
   border-radius: 2px;
-  padding: 10px 2%;
+  padding: 10px 6%;
   margin-top: 20px;
 }
 
 #site_footer {
-  background-color: #ffeedd;
+  background-color: #ffccaa;
   margin-top: 20px;
   text-align: center;
 }
@@ -107,15 +107,15 @@ header{
 }
 
 #site_footer a {
-  padding: 0 4%;
+  padding: 0px 10px;
 }
 
 /*TABLET - 600px - styling*/
 
 @media screen and ( min-width: 600px ) {
-  body {
+  /*body {
     background-color: green;
-  }
+  }*/
 
   #main_nav {
     display: flex;
@@ -131,9 +131,50 @@ header{
     margin-right: 2%;
   }
 
+  #main_content {
+    padding: 10px 2%;
+  }
+
   #sidebar_content {
     display: flex;
+    justify-content: center;
+  }
+
+  #sidebar_content div {
+    flex-basis: 30%;
+    padding: 10px 2%;
   }
 }
 
 /*DESKTOP - 1100px - styling*/
+
+@media screen and ( min-width: 1100px) {
+  /*body {
+    background-color: blue;
+  }*/
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  #main_nav {
+    flex-basis: 70%;
+  }
+
+  #main_content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #main_content div:nth-of-type(1) {
+    flex-basis: 65%;
+  }
+
+  #main_content div:nth-of-type(2) {
+    flex-basis: 30%;
+  }
+
+}
